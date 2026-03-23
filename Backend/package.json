@@ -1,0 +1,16 @@
+{
+  "name": "alwin-portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend for Alwin Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "mongoose": "^8.23.0"
+  }
+}

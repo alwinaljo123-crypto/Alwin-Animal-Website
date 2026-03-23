@@ -11,17 +11,17 @@ export default function ContributionForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    
+
     try {
       // Allow it to fetch from standard local backend if running locally
-      const res = await fetch("http://localhost:5000/api/contribute", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contribute`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      
+
       const data = await res.json();
-      
+
       if (data.success) {
         setStatus("success");
         setFeedback("Thank you for your contribution!");
@@ -40,7 +40,7 @@ export default function ContributionForm() {
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -62,20 +62,20 @@ export default function ContributionForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <label className="text-sm font-medium text-emerald-200/80">Name</label>
-            <input 
+            <input
               required
               value={formData.name}
-              onChange={(e) => setFormData({...formData, name: e.target.value})}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="w-full bg-emerald-950/50 border border-emerald-800/50 rounded-xl px-4 py-3 text-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all placeholder:text-emerald-700"
               placeholder="Your full name"
             />
           </div>
           <div className="space-y-2">
             <label className="text-sm font-medium text-emerald-200/80">Age (Optional)</label>
-            <input 
+            <input
               type="number"
               value={formData.age}
-              onChange={(e) => setFormData({...formData, age: e.target.value})}
+              onChange={(e) => setFormData({ ...formData, age: e.target.value })}
               className="w-full bg-emerald-950/50 border border-emerald-800/50 rounded-xl px-4 py-3 text-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all placeholder:text-emerald-700"
               placeholder="Your age"
             />
@@ -84,9 +84,9 @@ export default function ContributionForm() {
 
         <div className="space-y-2">
           <label className="text-sm font-medium text-emerald-200/80">Subject</label>
-          <input 
+          <input
             value={formData.subject}
-            onChange={(e) => setFormData({...formData, subject: e.target.value})}
+            onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
             className="w-full bg-emerald-950/50 border border-emerald-800/50 rounded-xl px-4 py-3 text-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all placeholder:text-emerald-700"
             placeholder="What is this regarding?"
           />
@@ -94,17 +94,17 @@ export default function ContributionForm() {
 
         <div className="space-y-2">
           <label className="text-sm font-medium text-emerald-200/80">Message</label>
-          <textarea 
+          <textarea
             required
             rows={5}
             value={formData.message}
-            onChange={(e) => setFormData({...formData, message: e.target.value})}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             className="w-full bg-emerald-950/50 border border-emerald-800/50 rounded-xl px-4 py-3 text-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all placeholder:text-emerald-700 resize-none"
             placeholder="Share your thoughts or ask how you can help..."
           />
         </div>
 
-        <button 
+        <button
           disabled={status === "loading"}
           type="submit"
           className="w-full group mt-4 relative inline-flex h-14 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 px-8 font-medium text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100"
@@ -121,7 +121,7 @@ export default function ContributionForm() {
         </button>
 
         {feedback && (
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className={`text-center text-sm font-medium ${status === "success" ? "text-emerald-400" : "text-red-400"}`}

@@ -118,8 +118,40 @@ export default function Home() {
               Alwin Jose Mathew
             </h1>
             <p className="text-xl md:text-2xl text-emerald-100/80 font-light max-w-2xl mx-auto">
-              Head of Endangered Species & Wildlife Advocate
+              Head of Endangered Species &amp; Wildlife Advocate
             </p>
+
+            {/* Contact Links */}
+            <div className="flex items-center justify-center gap-6 mt-8">
+              <a
+                href="mailto:alwinaljo123@gmail.com"
+                title="alwinaljo123@gmail.com"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-emerald-500/40 bg-emerald-950/40 hover:bg-emerald-800/50 hover:border-emerald-400 transition-all duration-300 text-emerald-200 hover:text-white group"
+              >
+                {/* Gmail-style envelope icon */}
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span className="text-sm font-medium">alwinaljo123@gmail.com</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/alwin-jose-mathew-554787381"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn Profile"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-emerald-500/40 bg-emerald-950/40 hover:bg-blue-800/50 hover:border-blue-400 transition-all duration-300 text-emerald-200 hover:text-white group"
+              >
+                {/* LinkedIn icon */}
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                <span className="text-sm font-medium">LinkedIn</span>
+              </a>
+            </div>
           </motion.div>
         </motion.div>
         
@@ -249,6 +281,23 @@ export default function Home() {
       
       {/* Footer */}
       <footer className="py-8 text-center border-t border-emerald-900/30 text-emerald-500/60 text-sm">
+        <div className="flex items-center justify-center gap-6 mb-3">
+          <a href="mailto:alwinaljo123@gmail.com" className="hover:text-emerald-300 transition-colors flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            alwinaljo123@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/alwin-jose-mathew-554787381" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
         <p>&copy; {new Date().getFullYear()} Alwin Portfolio. Dedicated to preserving nature's most vulnerable lives.</p>
       </footer>
     </main>

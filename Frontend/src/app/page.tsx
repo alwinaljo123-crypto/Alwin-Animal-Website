@@ -201,16 +201,16 @@ export default function Home() {
             viewport={{ once: true }}
             className="relative h-[400px] w-full rounded-3xl overflow-hidden glass-panel border border-emerald-900/40"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-950/80 to-transparent z-10" />
-            <div className="absolute inset-0 bg-[#061109] flex items-center justify-center text-emerald-900/50">
-               {/* Abstract decorative element representing Alwin's work */}
-               <svg viewBox="0 0 200 200" className="w-64 h-64 opacity-20 animate-[spin_40s_linear_infinite]">
-                 <path fill="currentColor" d="M42.7,-73.2C54.6,-66.4,63,-51.9,71.2,-37.4C79.4,-22.9,87.4,-8.4,85.1,5.1C82.8,18.6,70.2,31.2,59.3,42.4C48.4,53.6,39.2,63.4,27.2,71.5C15.2,79.6,0.4,86.1,-13.6,84.4C-27.6,82.7,-40.8,72.8,-53.4,62.3C-66,51.8,-78,40.7,-82.4,26.9C-86.8,13.1,-83.6,-3.4,-77,-18.2C-70.4,-33,-60.4,-46.1,-48.1,-53.5C-35.8,-60.9,-21.2,-62.6,-5.5,-56.1C10.2,-49.6,20.4,-34.9,42.7,-73.2Z" transform="translate(100 100)" />
-               </svg>
-            </div>
+            {/* Profile Photo */}
+            <img
+              src="/alwin_photo.jpg"
+              alt="Alwin Jose Mathew"
+              className="absolute inset-0 w-full h-full object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/20 to-transparent z-10" />
             <div className="absolute bottom-6 left-6 z-20">
-              <h3 className="text-2xl font-bold text-white mb-1">A Life for Nature</h3>
-              <p className="text-emerald-400/80 text-sm">Empowering generations to protect the wild.</p>
+              <h3 className="text-2xl font-bold text-white mb-1">Alwin Jose Mathew</h3>
+              <p className="text-emerald-400/80 text-sm">Wildlife Advocate & Conservationist</p>
             </div>
           </motion.div>
         </div>

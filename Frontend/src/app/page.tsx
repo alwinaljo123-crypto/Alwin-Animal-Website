@@ -199,15 +199,15 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative h-[400px] w-full rounded-3xl overflow-hidden glass-panel border border-emerald-900/40"
+            className="relative h-[520px] w-full rounded-3xl overflow-hidden glass-panel border border-emerald-900/40 bg-[#061109]"
           >
             {/* Profile Photo */}
             <img
               src="/alwin_photo.jpg"
               alt="Alwin Jose Mathew"
-              className="absolute inset-0 w-full h-full object-cover object-top"
+              className="absolute inset-0 w-full h-full object-contain object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/20 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-transparent to-transparent z-10" />
             <div className="absolute bottom-6 left-6 z-20">
               <h3 className="text-2xl font-bold text-white mb-1">Alwin Jose Mathew</h3>
               <p className="text-emerald-400/80 text-sm">Wildlife Advocate & Conservationist</p>
